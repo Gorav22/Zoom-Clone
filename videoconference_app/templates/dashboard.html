@@ -1,0 +1,25 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="{% static 'css/images.png' %}" type="image/x-icon">
+  
+  <title>Zoon</title>
+  <link rel="stylesheet" href="{% static 'css/scm2.css' %}">
+  <body>
+    <div class="container">
+      <h1>Welcome, {{name}}!</h1>
+      <img src="{% static 'css/images.png' %}" alt="not available" height="100px" width="100px">
+      <div class="options">        
+        <a href="{% url 'meeting' %}" class="option">New Meeting</a>
+        <a href="{% url 'join_room' %}" class="option">Join Meeting</a>
+        <a href="{% url 'logout' %}" class="option">Logout</a>
+      </div>
+  </div>
+  </body>
+</head>
+</html>
